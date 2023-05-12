@@ -1,0 +1,14 @@
+:host {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  overflow-x: auto;
+}
+
+:host ::ng-deep nb-window:not(.full-screen) {
+  margin: 0 2rem;
+}
+/*# sourceMappingURL=windows-container.component.css.map */

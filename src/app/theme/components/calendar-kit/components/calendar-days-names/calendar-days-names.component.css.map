@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "AAAA;;;;GAIG;AAEH,AAAA,KAAK,CAAC;EACJ,OAAO,EAAE,IAAI;EACb,eAAe,EAAE,aAAa;CAO/B;;AATD,AAIE,KAJG,CAIH,IAAI,CAAC;EACH,OAAO,EAAE,IAAI;EACb,WAAW,EAAE,MAAM;EACnB,eAAe,EAAE,MAAM;CACxB",
+    "sources": [
+        "calendar-days-names.component.scss"
+    ],
+    "names": [],
+    "file": "calendar-days-names.component.css"
+}

@@ -1,0 +1,73 @@
+:host {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 0 auto;
+          flex: 1 0 auto;
+  min-width: 20rem;
+}
+
+:host nb-card {
+  margin: 0;
+}
+
+:host nb-card-header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  overflow: hidden;
+}
+
+:host .title {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 0 auto;
+          flex: 1 0 auto;
+  margin-right: 3rem;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+:host .buttons {
+  width: 9.5rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+}
+
+:host .buttons [nbButton] {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 3rem;
+          flex: 0 0 3rem;
+}
+
+:host(.full-screen) {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+
+:host(.maximized) nb-card {
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+}
+
+:host(.minimized) nb-card {
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+  height: auto;
+}
+
+:host(.minimized) nb-card nb-card-header {
+  border-bottom: none;
+}
+/*# sourceMappingURL=window.component.css.map */

@@ -1,0 +1,14 @@
+<nb-card>
+  <nb-card-header>
+    <ngx-search (positionChanged)="setPosition($event)"></ngx-search>
+      <input type="text" id="addr" nbInput fullWidth>
+
+    
+  </nb-card-header>
+  <nb-card-body>
+<google-map [center]="position" [zoom]="zoom" width="100%" height="30.5625rem" (mapClick)="get_address($event)" >
+  <map-marker [position]="position"></map-marker>
+</google-map>
+  </nb-card-body>
+
+</nb-card>

@@ -1,0 +1,10 @@
+:host {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.days-container {
+  width: 100%;
+}
+/*# sourceMappingURL=calendar-day-picker.component.css.map */

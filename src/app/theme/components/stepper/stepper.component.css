@@ -1,0 +1,88 @@
+:host(.horizontal) .header .step {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+:host(.horizontal) .header .connector {
+  height: 2px;
+}
+
+:host(.horizontal) .label-index {
+  margin-bottom: 10px;
+}
+
+:host(.vertical) {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 100%;
+}
+
+:host(.vertical) .header {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+:host(.vertical) .header .label {
+  margin: 0 10px;
+}
+
+:host(.vertical) .header .connector {
+  width: 2px;
+}
+
+.header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  margin-bottom: 10px;
+}
+
+.header .connector {
+  -webkit-box-flex: 1;
+      -ms-flex: auto;
+          flex: auto;
+}
+
+.header .step {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  cursor: pointer;
+}
+
+.header .step.noninteractive {
+  cursor: default;
+}
+
+.header .label-index {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.header .label {
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+}
+/*# sourceMappingURL=stepper.component.css.map */

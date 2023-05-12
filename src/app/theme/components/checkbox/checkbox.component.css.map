@@ -1,0 +1,10 @@
+{
+    "version": 3,
+    "mappings": "ACAA;;;;GAIG;AAoKH;;;;GAIG;AAsBH;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;EAmHE;ADnTF,AACE,KADG,CACH,MAAM,CAAC;EACL,QAAQ,EAAE,QAAQ;EAClB,OAAO,EAAE,WAAW;EACpB,WAAW,EAAE,MAAM;EACnB,MAAM,EAAE,CAAC;EACT,UAAU,EAAE,OAAO;CACpB;;AAPH,AASE,KATG,CASH,gBAAgB,CAAC;EACf,WAAW,EAAE,CAAC;CACf;;AAGH,AACE,KADI,CAAA,cAAc,EAClB,gBAAgB,CAAC;ECkHjB,mBAAmB,EAAE,KAAK;EAC1B,mBAAmB,EDlHe,gBAAgB,EAAE,MAAM,EAAE,UAAU;ECmHtE,0BAA0B,EAAE,OAAO;CDlHlC;;AAHH,AAIE,KAJI,CAAA,cAAc,EAIlB,KAAK,CAAC;EC+GN,mBAAmB,EAAE,KAAK;EAC1B,mBAAmB,ED/Ge,KAAK;ECgHvC,0BAA0B,EAAE,OAAO;CD/GlC",
+    "sources": [
+        "checkbox.component.scss",
+        "../../styles/core/_mixins.scss"
+    ],
+    "names": [],
+    "file": "checkbox.component.css"
+}

@@ -1,0 +1,65 @@
+:host {
+  display: block;
+  position: relative;
+  overflow: hidden;
+}
+
+:host .second-card-container {
+  position: absolute;
+  top: 100%;
+  right: 0;
+  left: 0;
+  overflow: hidden;
+  -webkit-transition: top 0s 0.5s;
+  transition: top 0s 0.5s;
+}
+
+:host ::ng-deep nb-card-front nb-card,
+:host ::ng-deep nb-card-back nb-card {
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  margin: 0;
+}
+
+:host ::ng-deep nb-card-front {
+  display: block;
+  height: 100%;
+}
+
+:host ::ng-deep nb-card-back {
+  position: absolute;
+  left: 0;
+  top: 100%;
+  width: 100%;
+  -webkit-transition: top 0.5s;
+  transition: top 0.5s;
+}
+
+:host .reveal-button {
+  cursor: pointer;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
+  -webkit-transition: -webkit-transform 0.3s;
+  transition: -webkit-transform 0.3s;
+  transition: transform 0.3s;
+  transition: transform 0.3s, -webkit-transform 0.3s;
+}
+
+:host(.revealed) .second-card-container {
+  top: 0;
+  -webkit-transition: none;
+  transition: none;
+}
+
+:host(.revealed) .second-card-container ::ng-deep nb-card-back {
+  top: 0;
+}
+
+:host(.revealed) .reveal-button {
+  -webkit-transform: none;
+          transform: none;
+}
+/*# sourceMappingURL=reveal-card.component.css.map */

@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "AAAA;;;;GAIG;AAEH,AACE,KADG,CACH,MAAM,CAAC;EACL,QAAQ,EAAE,QAAQ;EAClB,KAAK,EAAE,CAAC;EACR,MAAM,EAAE,CAAC;CACV",
+    "sources": [
+        "popover.component.scss"
+    ],
+    "names": [],
+    "file": "popover.component.css"
+}

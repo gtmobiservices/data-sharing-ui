@@ -1,0 +1,156 @@
+<ngx-spinner type="square-jelly-box"></ngx-spinner>
+<nb-card>
+    <nb-card-header>
+        <div class="row">
+            <div class="col-md-5">
+                <h4>Manage Data Sharing</h4>
+            </div>
+        </div>
+    </nb-card-header>
+    <nb-card-body>
+        <form [formGroup]="form">
+            <div class="row">
+                <div class="col-sm-3">
+                    <div class="form-group">
+                        <label>Select User : </label>
+                        <nb-select [disabled]="updateButton" placeholder="Select user" [selected]="''+selectedUserId"
+                            fullWidth formControlName="user_id" id="user_id">
+                            <nb-option *ngFor="let user of userList" value={{user.id}}>
+                                {{user.name}}
+                            </nb-option>
+                        </nb-select>
+                        <div *ngIf="f.user_id.touched && f.user_id.invalid" class="caption status-danger">
+                            <div *ngIf="f.user_id.errors.required">
+                                Please select any user</div>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="col-sm-3">
+                    <div class="form-group">
+                        <label>From Date: </label>
+                        <input placeholder="From Date" nbInput fullWidth type="text" formControlName="from_date"
+                            [nbDatepicker]="from_date">
+                        <nb-date-timepicker #from_date twelveHoursFormat></nb-date-timepicker>
+                    </div>
+                </div>
+
+                <div class="col-sm-3">
+                    <div class="form-group">
+                        <label>To Date: </label>
+                        <input placeholder="To Date" nbInput fullWidth type="text" formControlName="to_date"
+                            [nbDatepicker]="to_date">
+                        <nb-date-timepicker #to_date twelveHoursFormat></nb-date-timepicker>
+                    </div>
+                </div>
+
+
+                <div class="col-sm-3" style="align-self: center;">
+                    <button *ngIf="updateButton==false" nbButton hero size="small" [disabled]="!form.valid"
+                        (click)="submit()" status="success">
+                        <nb-icon icon="plus"></nb-icon>
+                        Create
+                    </button>
+                    <button *ngIf="updateButton==true" nbButton hero size="small" [disabled]="!form.valid"
+                        (click)="update()" status="success">
+                        Update
+                    </button>
+                    <button *ngIf="updateButton==true" style="margin-left: 10px;" nbButton hero size="small"
+                        status="info" (click)="Cancel()">
+                        Cancel
+                    </button>
+                    <button style="margin-left: 10px;" nbButton hero size="small" status="info" type="reset"
+                        (click)="reset()">
+                        Reset
+                    </button>
+                </div>
+            </div>
+        </form>
+
+
+        <div style="margin-top: 2%; padding-left: 1%;" class="row">
+            <div class="col-lg-4">
+                <label>Item by page: </label>
+                <input nbInput type="number" (keyup)="onTableSizeChange($event)" class="form-control"
+                    style="font-weight: bold;" [(ngModel)]="tableSize" name="tbloffset" #size="ngModel">
+            </div>
+            <div class="col-lg-8">
+                <label>&nbsp;</label>
+                <nb-form-field style="max-width: 50rem;">
+                    <input nbInput type="text" [(ngModel)]="searchText" (keyup)="onSearchChange($event)"
+                        class="form-control" style="font-weight: bold; max-width: 60%;" name="search"
+                        placeholder="Search">
+                    <nb-icon nbPrefix icon="search" pack="eva"></nb-icon>
+                </nb-form-field>
+            </div>
+        </div>
+        <hr />
+
+        <div id="table" style="margin-left: 1%; margin-top: 2%; text-align: center;">
+            <table class="table-c table-striped">
+                <thead style="font-weight: bold;">
+                    <tr>
+                        <td>User Name</td>
+                        <td>From Date</td>
+                        <td>To Date</td>
+                        <td>Created Time</td>
+                        <td>Copy link</td>
+                        <td>Status</td>
+                        <td>Edit</td>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr style="text-align: left;" *ngFor="let data of tc_share_data | filter:searchText | paginate : {
+                        itemsPerPage: tableSize,
+                        currentPage: page,
+                        totalItems: count
+                    }; let i = index" [class.active]="i == currentIndex">
+                        <td style="text-align: center;">{{data.user_name}}</td>
+                        <td style="text-align: center;">{{data.from_date}} </td>
+                        <td style="text-align: center;"> {{data.to_date}} </td>
+                        <td style="text-align: center;">{{data.created_time}}</td>
+
+                        <td style="text-align: center;">
+                            <button style="border-color: #c9c9c9;border-radius: 4px; padding: 8px 4px;"
+                                title="Copy to clipboard" nbButton hero outline status="info" size="small"
+                                (click)="copyLink(data)" type="submit">
+                                <nb-icon style="height: 15px;width: 21px;" icon="copy-outline"></nb-icon>
+                            </button>
+                        </td>
+
+                        <td *ngIf="data.is_active==true" style="color:green;text-align: center;">
+                            <button nbButton status="success" size="small"
+                                (click)="inactiveShareData(data.share_data_id)">
+                                <nb-icon icon="checkmark-outline"></nb-icon>
+                            </button>
+                        </td>
+
+                        <td *ngIf="data.is_active==false" style="color:red;text-align: center;">
+                            <button nbButton status="danger" size="small" (click)="activeShareData(data.share_data_id)">
+                                <nb-icon icon="close-outline"></nb-icon>
+                            </button>
+                        </td>
+
+                        <td style="color:red;text-align: center;">
+                            <button nbButton status="primary" size="small" (click)="editsahreData(data)">
+                                <nb-icon icon="edit-outline"></nb-icon>
+                            </button>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <!-- PAGINATION CONTROL FOR TABLE -->
+            <div class="d-flex justify-content-center">
+                <pagination-controls responsive="true" previousLabel="Prev" nextLabel="Next"
+                    (pageChange)="onTableDataChange($event)">
+                </pagination-controls>
+            </div>
+        </div>
+
+
+    </nb-card-body>
+</nb-card>
+
+<button style="display: none;" id="copyLink" [cdkCopyToClipboard]="dataLinkCPY"></button>

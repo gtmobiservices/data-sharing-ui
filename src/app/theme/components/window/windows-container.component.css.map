@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "AAAA,AAAA,KAAK,CAAC;EACJ,OAAO,EAAE,IAAI;EACb,WAAW,EAAE,QAAQ;EACrB,UAAU,EAAE,IAAI;CAKjB;;AARD,AAKE,KALG,CAKH,SAAS,CAAC,SAAS,AAAA,IAAK,CAAA,YAAY,EAAE;EACpC,MAAM,EAAE,MAAM;CACf",
+    "sources": [
+        "windows-container.component.scss"
+    ],
+    "names": [],
+    "file": "windows-container.component.css"
+}

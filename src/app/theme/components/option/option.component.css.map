@@ -1,0 +1,10 @@
+{
+    "version": 3,
+    "mappings": "AAAA;;;;GAIG;ACJH;;;;GAIG;AAoKH;;;;GAIG;AAsBH;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;EAmHE;AD7SF,AAAA,KAAK,CAAC;EACJ,OAAO,EAAE,IAAI;CAgBd;;AAjBD,AAGE,KAHG,AAGF,MAAM,CAAC;EACN,MAAM,EAAE,OAAO;CAChB;;AALH,AAOE,KAPG,CAOH,WAAW,CAAC;EACV,OAAO,EAAE,IAAI;EACb,cAAc,EAAE,IAAI;CAOrB;;CCgSD,AAAA,AAAA,GAAC,CAAD,GAAC,AAAA,EDhTH,KAAK,CAOH,WAAW,CCySI;EAEX,YAAQ,EDxSoB,MAAM;CC4SrC;;CAND,AAAA,AAAA,GAAC,CAAD,GAAC,AAAA,EDhTH,KAAK,CAOH,WAAW,CCySI;EAEX,WAAQ,EDvSmB,MAAM;CC2SpC;;ADtTH,AAaI,KAbC,CAOH,WAAW,CAMT,SAAS,CAAC,MAAM,CAAC;EACf,OAAO,EAAE,CAAC;CACX;;AAIL,AAAA,KAAM,EAAA,AAAA,QAAC,AAAA,GAAW;EAChB,cAAc,EAAE,IAAI;CACrB;;AAED,AAAA,KAAM,CAAA,cAAc,EAAE;ECoGpB,mBAAmB,EAAE,KAAK;EAC1B,mBAAmB,EDpGa,gBAAgB,EAAE,KAAK;ECqGvD,0BAA0B,EAAE,OAAO;CDpGpC",
+    "sources": [
+        "option.component.scss",
+        "../../styles/core/_mixins.scss"
+    ],
+    "names": [],
+    "file": "option.component.css"
+}

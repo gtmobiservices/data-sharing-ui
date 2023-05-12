@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "AAAA;;;;GAIG;AAEH,AAAA,KAAK,CAAC;EACJ,OAAO,EAAE,IAAI;EACb,WAAW,EAAE,MAAM;EACnB,MAAM,EAAE,OAAO;CAKhB;;AARD,AAKE,KALG,AAKF,MAAM,CAAC;EACN,OAAO,EAAE,CAAC;CACX",
+    "sources": [
+        "accordion-item-header.component.scss"
+    ],
+    "names": [],
+    "file": "accordion-item-header.component.css"
+}
