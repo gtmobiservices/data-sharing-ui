@@ -12,4 +12,4 @@ RUN apk add bash && \
     npm link @angular/cli@v11.0.7
 
 # Define the command to run when the container starts
-CMD ["ng","serve","--port","3000"]
+CMD ["ng","serve","--host","0.0.0.0","--port","3000"]
